@@ -69,38 +69,44 @@
 // obj.display();
 
 
-class TrieNode{
-    constructor() {
-        this.children = {};
-        this.endOfWord = false;
-    }
-}
+// class TrieNode{
+//     constructor() {
+//         this.children = {};
+//         this.endOfWord = false;
+//     }
+// }
 
-class Trie{
-    constructor() {
-        this.root = new TrieNode();
-    }
-    insert(word) {
-        let currentValue = this.root;
-        for (let i = 0; i <= word.length; i++){
-            let char = word[i];
-            if (!currentValue.children[char]) currentValue.children[char] = new TrieNode();
-            currentValue = currentValue.children[char];
-        }
-        currentValue.endOfWord = true;
-    }
-    getWord(word) {
-        let currentValue = this.root;
-        let prefix = '';
-        for (let i = 0; i < word.length; i++) {
-            let char = word[i]
-            if (i % 2 != 0) {
-                prefix += char;
-                this.autoFillWord(currentValue, prefix)
-            }
-        }
-    }
-    autoFillWord(node, prefix) {
-        let 
-    }
+// class Trie{
+//     constructor() {
+//         this.root = new TrieNode();
+//     }
+//     insert(word) {
+//         let currentValue = this.root;
+//         for (let i = 0; i <= word.length; i++){
+//             let char = word[i];
+//             if (!currentValue.children[char]) currentValue.children[char] = new TrieNode();
+//             currentValue = currentValue.children[char];
+//         }
+//         currentValue.endOfWord = true;
+//     }
+//     getWord(word) {
+//         let currentValue = this.root;
+//         let prefix = '';
+//         for (let i = 0; i < word.length; i++) {
+//             let char = word[i]
+//             if (i % 2 != 0) {
+//                 prefix += char;
+//                 this.autoFillWord(currentValue, prefix)
+//             }
+//         }
+//     }
+//     autoFillWord(node, prefix) {
+//         let
+//     }
+// }
+
+let arr = ['don', 'donnd', 'nopea']
+let obj;
+for (let i of arr) {
+    console.log(i.split('').sort().join(''));
 }
